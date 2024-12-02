@@ -8,6 +8,6 @@ For the model selection classifiers, the class index is as follows:
   - Binary classification: $\zeta = 1$ for the model that first appears in the respective folder. For example, for folder "Models E1 and E2", $\zeta = 1$ refers to Model E1 and $\zeta = 2$ refers to Model E2
   - Multiclass classification: $\zeta = 1$ refers to Model W, $\zeta = 2$ to Model HW, $\zeta = 3$ to Model E1, and $\zeta = 4$ to Model E2.
 
-The instrutions how to load the estimators in [`Julia`](https://julialang.org/downloads/) are in each folder.
+The instructions how to load the estimators in [`Julia`](https://julialang.org/downloads/) are given in file `Loading.jl`.
 
 
