@@ -1,6 +1,6 @@
 # NBEs and model selection classifiers
 
-This repository contains all the neural Bayes estimators (NBEs) and model selection classifiers trained for the paper "Neural Bayes estimation for complex bivariate extremal dependence models". 
+This repository contains all the neural Bayes estimators (NBEs) and model selection classifiers trained for the paper "Neural Bayes estimation for complex bivariate extremal dependence models" (in preparation). 
 
 All the estimators were trained for sample sizes $n\in (100, 1500)$ and, in the case of censored data, with censoring levels $\tau \in (0.55, 0.99).$ For Model W and the WCM with Model E1 as the tail component, the neural interval estimators are givne in the folder "Interval Estimator".
 
