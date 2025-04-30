@@ -1,4 +1,5 @@
 using NeuralEstimators
+using Flux
 using Flux: loadmodel!
 using BSON
 
