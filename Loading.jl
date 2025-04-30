@@ -237,9 +237,9 @@ BSON.@load "NBE/WCM/Gaussian and E2/best_network.bson" model_state
 θ̂_wcm_e1 = deepcopy(θ̂);
 loadmodel!(θ̂_wcm_e1, model_state);
 
-# Neural classifier - Model selection
+# NBCs - Model selection
 
-## Binary Classification
+## K = 2
 
 ### Models W and HW
 d = 2;
@@ -251,7 +251,7 @@ q = 128;
 ϕ = Chain(Dense(q + 1, w, relu), Dense(w, p), softmax);
 θ̂  = DeepSet(ψ, ϕ);
 
-BSON.@load "Neural Classifier/Binary Classification/Models W and HW/best_network.bson" model_state
+BSON.@load "NBC/K = 2/Models W and HW/best_network.bson" model_state
 θ̂_whw = deepcopy(θ̂);
 loadmodel!(θ̂_whw, model_state);
 
@@ -266,7 +266,7 @@ q = 128;
 deepset = DeepSet(ψ, ϕ);
 θ̂  = PointEstimator(deepset)
 
-BSON.@load "Neural Classifier/Binary Classification/Models W and E1/best_network.bson" model_state
+BSON.@load "NBC/K = 2/Models W and E1/best_network.bson" model_state
 θ̂_we1 = deepcopy(θ̂);
 loadmodel!(θ̂_we1, model_state);
 
@@ -281,7 +281,7 @@ q = 128;
 deepset = DeepSet(ψ, ϕ);
 θ̂  = PointEstimator(deepset)
 
-BSON.@load "Neural Classifier/Binary Classification/Models W and E2/best_network.bson" model_state
+BSON.@load "NBC/K = 2/Models W and E2/best_network.bson" model_state
 θ̂_we2 = deepcopy(θ̂);
 loadmodel!(θ̂_we2, model_state);
 
@@ -296,7 +296,7 @@ q = 128;
 deepset = DeepSet(ψ, ϕ);
 θ̂  = PointEstimator(deepset)
 
-BSON.@load "Neural Classifier/Binary Classification/Models HW and E1/best_network.bson" model_state
+BSON.@load "NBC/K = 2/Models HW and E1/best_network.bson" model_state
 θ̂_hwe1 = deepcopy(θ̂);
 loadmodel!(θ̂_hwe1, model_state);
 
@@ -311,7 +311,7 @@ q = 128;
 deepset = DeepSet(ψ, ϕ);
 θ̂  = PointEstimator(deepset)
 
-BSON.@load "Neural Classifier/Binary Classification/Models HW and E2/best_network.bson" model_state
+BSON.@load "NBC/K = 2/Models HW and E2/best_network.bson" model_state
 θ̂_hwe2 = deepcopy(θ̂);
 loadmodel!(θ̂_hwe2, model_state);
 
@@ -326,11 +326,11 @@ q = 128;
 deepset = DeepSet(ψ, ϕ);
 θ̂  = PointEstimator(deepset)
 
-BSON.@load "Neural Classifier/Binary Classification/Models E1 and E2/best_network.bson" model_state
+BSON.@load "NBC/K = 2/Models E1 and E2/best_network.bson" model_state
 θ̂_e1e2 = deepcopy(θ̂);
 loadmodel!(θ̂_e1e2, model_state);
 
-## Multiclass Classification
+## K = 4
 d = 2;
 p = 4;
 w = 128;
@@ -341,6 +341,6 @@ q = 256;
 deepset = DeepSet(ψ, ϕ);
 θ̂ = PointEstimator(deepset)
 
-BSON.@load "Neural Classifier/Multiclass Classification/best_network.bson" model_state
+BSON.@load "NBC/K = 4/best_network.bson" model_state
 θ̂_ms = deepcopy(θ̂);
 loadmodel!(θ̂_ms, model_state);
